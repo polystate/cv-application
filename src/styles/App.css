@@ -1,0 +1,48 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  /* background: rgb(247, 244, 244); */
+}
+
+.card {
+  padding: 2em;
+  /* background: rgb(19, 18, 18); */
+  border: 1px solid white;
+  background: rgb(32, 32, 32);
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+header{
+  color: rgb(37, 36, 36);
+  padding-bottom: 0.1rem;
+  /* letter-spacing: 1rem; */
+  width: 100%;
+  background: whitesmoke;
+  height: 100%;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: rgb(32, 32, 32);
+}
+
+p{
+  color: white;
+}
+
+main{
+  display: flex;
+  margin-top: 2rem;
+  background: whitesmoke;
+}
+
+form{
+  display: flex;
+  gap: 2rem;
+}
