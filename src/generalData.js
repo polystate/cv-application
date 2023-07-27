@@ -1,4 +1,5 @@
 export const general = {
+  Title: "General",
   "First Name": "John",
   "Last Name": "Adams",
   "E-Mail": "sdfsd",
@@ -6,6 +7,7 @@ export const general = {
 };
 
 export const education = {
+  Title: "Education",
   "Universities Attended": "John",
   "Subjects Studied": "sdfsd",
   "Start Date": "5/14/1988",
@@ -13,6 +15,7 @@ export const education = {
 };
 
 export const experience = {
+  Title: "Experience",
   "Name of Company": "Big Time Company",
   "Positions Held": "My Position Title",
   Responsibilities: "Big Time Responsibilities",

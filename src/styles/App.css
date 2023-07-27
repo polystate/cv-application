@@ -1,29 +1,23 @@
+:root{
+  --main-spacing: 2rem;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: var(--main-spacing);
   text-align: center;
-  /* background: rgb(247, 244, 244); */
-}
-
-.card {
-  padding: 2em;
-  /* background: rgb(19, 18, 18); */
-  border: 1px solid white;
-  background: rgb(32, 32, 32);
-}
-
-.read-the-docs {
-  color: #888;
 }
 
 header{
   color: rgb(37, 36, 36);
   padding-bottom: 0.1rem;
-  /* letter-spacing: 1rem; */
   width: 100%;
   background: whitesmoke;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -38,11 +32,15 @@ p{
 
 main{
   display: flex;
-  margin-top: 2rem;
+  margin-top: var(--main-spacing);
   background: whitesmoke;
 }
 
 form{
   display: flex;
-  gap: 2rem;
+  gap: var(--main-spacing);
 }
+
+
+
+

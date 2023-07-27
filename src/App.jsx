@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Section from "./components/Section"
 import { general, education, experience } from "./generalData"
 import './styles/App.css'
