@@ -1,5 +1,7 @@
 :root{
   --main-spacing: 2rem;
+  --green-col: #4caf50;
+  --main-background: whitesmoke;
 }
 
 #root {
@@ -9,11 +11,15 @@
   text-align: center;
 }
 
+*{
+  outline: none;
+}
+
 header{
   color: rgb(37, 36, 36);
   padding-bottom: 0.1rem;
   width: 100%;
-  background: whitesmoke;
+  background: var(--main-background);
   height: 100%;
   display: flex;
   align-items: center;
@@ -33,7 +39,7 @@ p{
 main{
   display: flex;
   margin-top: var(--main-spacing);
-  background: whitesmoke;
+  background: var(--main-background);
 }
 
 form{

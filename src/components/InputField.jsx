@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import "../styles/Section.css";
 
-const InputField = ({ placeholder, onChange, onFocusChange }) => {
+const InputField = ({ placeholder, onChange, onFocusChange, disabled }) => {
   const [isFocused, setFocus] = useState(false);
   const handleFocusChange = (focused) => {
     setFocus(focused);
@@ -9,7 +9,7 @@ const InputField = ({ placeholder, onChange, onFocusChange }) => {
   }
   return (
     <div className="field">
-      <input type="text" placeholder={placeholder} onChange={onChange} onFocus={() => {
+      <input type="text" disabled={disabled} placeholder={placeholder} onChange={onChange} onFocus={() => {
       handleFocusChange(true)
     }
     } onBlur={() => {
