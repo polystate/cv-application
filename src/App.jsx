@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState, useEffect } from 'react';
 import Section from "./components/Section"
 import { general, education, experience } from "./generalData"
 import './styles/App.css'
@@ -9,12 +9,19 @@ function App() {
   const [isEducationComplete, setEducationComplete] = useState(false);
   const [isExperienceComplete, setExperienceComplete] = useState(false);
 
+  useEffect(() => {
+    if(isGeneralComplete && isEducationComplete && isExperienceComplete){
+      setAllFormsComplete(true);
+    } else setAllFormsComplete(false);
+  }, [isGeneralComplete, isEducationComplete, isExperienceComplete])
+
   return (
     <>
     <header>
       <h1>CV Generator</h1>
     </header>
     <main>
+    <form>
         {
           (!allFormsComplete) ? (
             <>
@@ -24,6 +31,7 @@ function App() {
             </>
           )  : null
         }
+        </form>
     </main>
     </>
   )

@@ -11,10 +11,13 @@ function Section({ sectionName, isComplete, setComplete }){
     const [isAnyInputFocused, setIsAnyInputFocused] = useState(false);
     const [isSubmitClicked, setIsSubmitClicked] = useState(false);
     const [isEditClicked, setIsEditClicked] = useState(false);
-    const handleSubmit = () => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
         setIsSubmitClicked(true);
     }
-    const handleEdit = () => {
+    const handleEdit = (e) => {
+        e.preventDefault();
         setIsEditClicked(true);
         setIsSubmitClicked(false);
     }
@@ -34,15 +37,20 @@ function Section({ sectionName, isComplete, setComplete }){
         const progressPercent = currentProgressBar();
         setProgress(progressPercent);
 
-        const isSectionComplete = progressPercent === 100 && !isAnyInputFocused;
+        const isSectionComplete = progressPercent === 100 && !isAnyInputFocused && isSubmitClicked;
         setComplete(isSectionComplete);
 
-      }, [inputValues, sectionName, isAnyInputFocused, setComplete]);
+      }, [inputValues, sectionName, isAnyInputFocused, setComplete, isSubmitClicked]);
 
     return(
         <section>
+
             <h2>{sectionName["Title"]} {currentProgressBar() === 100 && !isAnyInputFocused ? <GreenCheckMark /> : null}</h2>
+
+            <div className="progress-container">
             {currentProgressBar() === 100 && !isAnyInputFocused  ? null : <ProgressBar Progress={progress} />}
+            </div>
+
                 {Object.entries(sectionName).map(([key, value], index) => {
                     if(key === "Title") return null;
                     const isDisabled =

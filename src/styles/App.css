@@ -2,6 +2,7 @@
   --main-spacing: 2rem;
   --green-col: #4caf50;
   --main-background: whitesmoke;
+  --max-width: 80vh;
 }
 
 #root {
@@ -15,10 +16,12 @@
   outline: none;
 }
 
+
+
 header{
   color: rgb(37, 36, 36);
   padding-bottom: 0.1rem;
-  width: 100%;
+  width: var(--max-width);
   background: var(--main-background);
   height: 100%;
   display: flex;
@@ -40,11 +43,18 @@ main{
   display: flex;
   margin-top: var(--main-spacing);
   background: var(--main-background);
+  max-width: var(--max-width);
+  justify-content: center;
 }
 
 form{
   display: flex;
   gap: var(--main-spacing);
+  padding: var(--main-spacing);
+  background: var(--main-background);
+  min-height: 100vh;
+  max-width: var(--max-width);
+  justify-content: center;
 }
 
 
