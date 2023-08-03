@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
-import Section from "./components/Section"
-import { general, education, experience } from "./generalData"
-import './styles/App.css'
+import Section from "./components/Section";
+import Generator from './components/Generator';
+import { general, education, experience } from "./generalData";
+import './styles/App.css';
 
 function App() {
   const [allFormsComplete, setAllFormsComplete] = useState(false);
   const [isGeneralComplete, setGeneralComplete] = useState(false);
   const [isEducationComplete, setEducationComplete] = useState(false);
   const [isExperienceComplete, setExperienceComplete] = useState(false);
+  const [formData, setFormData] = useState({});
 
   useEffect(() => {
     if(isGeneralComplete && isEducationComplete && isExperienceComplete){
@@ -25,11 +27,11 @@ function App() {
         {
           (!allFormsComplete) ? (
             <>
-              <Section sectionName={general} isComplete={isGeneralComplete} setComplete={setGeneralComplete}/>
-              <Section sectionName={education} isComplete={isEducationComplete} setComplete={setEducationComplete}/>
-              <Section sectionName={experience} isComplete={isExperienceComplete} setComplete={setExperienceComplete}/>
+              <Section sectionName={general} isComplete={isGeneralComplete} setComplete={setGeneralComplete} onSectionComplete={(data => setFormData((prev) => ({...prev, general: data})))}/>
+              <Section sectionName={education} isComplete={isEducationComplete} setComplete={setEducationComplete} onSectionComplete={(data => setFormData((prev) => ({...prev, education: data})))}/>
+              <Section sectionName={experience} isComplete={isExperienceComplete} setComplete={setExperienceComplete} onSectionComplete={(data => setFormData((prev) => ({...prev, experience: data})))}/>
             </>
-          )  : null
+          )  : <Generator formData={formData}/>
         }
         </form>
     </main>

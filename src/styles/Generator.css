@@ -1,0 +1,53 @@
+.generated{
+    height: 100%;
+    /* border: 1px solid #242424; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    background: #242424;
+  }
+
+form{
+    width: 100%;
+  }
+
+h2{
+    margin-top: 1rem;
+}
+
+.generated p{
+    color: #242424;
+    margin: 1rem;
+}
+
+.sectionKey{
+  border: 1px solid #242424;
+  background: white;
+}
+
+.subKeyValues{
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  /* gap: 2rem; */
+  justify-content: space-around;
+  
+}
+
+.subKey{
+  border: 1px solid #242424;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.subKey p{
+  color: #242424;
+}
+
+h3{
+  margin-left: 2rem;
+}

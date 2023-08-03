@@ -3,9 +3,10 @@ import InputField from './InputField';
 import ButtonContainer from './ButtonContainer';
 import ProgressBar from './ProgressBar';
 import GreenCheckMark from './GreenCheckMark';
+import Preview from "./Preview";
 import "../styles/Section.css";
 
-function Section({ sectionName, isComplete, setComplete }){
+function Section({ sectionName, isComplete, setComplete, onSectionComplete }){
     const [inputValues, setInputValues] = useState({});
     const [progress, setProgress] = useState(0);
     const [isAnyInputFocused, setIsAnyInputFocused] = useState(false);
@@ -15,6 +16,7 @@ function Section({ sectionName, isComplete, setComplete }){
     const handleSubmit = (e) => {
         e.preventDefault();
         setIsSubmitClicked(true);
+        onSectionComplete(inputValues);
     }
     const handleEdit = (e) => {
         e.preventDefault();

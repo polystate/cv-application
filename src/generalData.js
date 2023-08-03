@@ -2,21 +2,21 @@ export const general = {
   Title: "General",
   "First Name": "John",
   "Last Name": "Adams",
-  "E-Mail": "sdfsd",
-  "Phone Number": "2343",
+  "E-Mail": "johnadams3924@gmail.com",
+  "Phone Number": "(561)-372-8423",
 };
 
 export const education = {
   Title: "Education",
-  "Universities Attended": "John",
-  "Subjects Studied": "sdfsd",
+  Universities: "John",
+  Studied: "sdfsd",
   "Start Date": "5/14/1988",
   "End Date": "6/12/1995",
 };
 
 export const experience = {
   Title: "Experience",
-  "Name of Company": "Big Time Company",
+  "Company Name": "Big Time Company",
   "Positions Held": "My Position Title",
   Responsibilities: "Big Time Responsibilities",
   "Start Date": "7/12/1988",

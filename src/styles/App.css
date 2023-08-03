@@ -16,8 +16,6 @@
   outline: none;
 }
 
-
-
 header{
   color: rgb(37, 36, 36);
   padding-bottom: 0.1rem;
@@ -56,6 +54,8 @@ form{
   max-width: var(--max-width);
   justify-content: center;
 }
+
+
 
 
 
