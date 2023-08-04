@@ -1,11 +1,10 @@
 .generated{
     height: 100%;
-    /* border: 1px solid #242424; */
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     background: #242424;
   }
 
@@ -23,22 +22,18 @@ h2{
 }
 
 .sectionKey{
-  border: 1px solid #242424;
   background: white;
 }
 
 .subKeyValues{
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
-  /* gap: 2rem; */
   justify-content: space-around;
   
 }
 
 .subKey{
-  border: 1px solid #242424;
-  margin: 1rem;
+  /* margin: 1rem; */
   display: flex;
   align-items: center;
   margin-bottom: 2rem;

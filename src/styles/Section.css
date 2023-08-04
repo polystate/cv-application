@@ -33,6 +33,7 @@ button {
     background: var(--green-col);
     color: white;
   }
+  
   button:focus,
   button:focus-visible {
     border: 1px solid var(--main-background);
